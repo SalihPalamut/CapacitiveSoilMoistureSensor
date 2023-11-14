@@ -50,6 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-Production/*
-~*
-yedek_*
+History*
+Project Logs for *
+Project Outputs for *
+*__Previews*
+*.was*
