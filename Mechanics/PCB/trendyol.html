@@ -1,0 +1,123 @@
+<div>
+    &emsp;Bizim ürünümüz diğer ürünler gibi dirençli algılama yöntemiyle değil kapasitif algılama yöntemiyle çalışır. Bu
+    sayede toprakta elektroliz sonucu oluşan oksidasyon oluşmaz. Hem toprağı korur hem de uzun süre&nbsp; kullanım ömrü
+    sağlayan korozyona dayanıklı bir malzemeden yapılmıştır. 3.3~5 VDC çalışma gerilim aralığına sahiptir.
+    <br />
+</div>
+<ul>
+    <li>Toprak nemi ve Su seviye tespiti için kullanılabilir.
+    </li>
+    <li>Arduino, Esp32, Stm32, Raspberry Pi, Orange Pi vb. platformlarla uyumlu besleme gerilim desteği (3.3~5V max
+        150mA)
+    </li>
+    <li>Temizlenmiş Analog Çıkış sinyali.
+    </li>
+    <li>Mekanik Montaja uygun M3 vida delikleri
+    </li>
+    <li>2.54 mm Pinheader uyumlu (dişi-erkek ile doğrudan arduino kullanılabilir)
+    </li>
+</ul>
+<div>Modülün Mekanik Özellikleri
+    <br />
+</div>
+<div>
+    <div>
+        <img style="width:250px;"
+            src="https://cdn.dsmcdn.com/ty1349/product/media/html-images/20240605/21/834456771/4363cd92-8ce3-42ad-9b20-77ecdbac7dc5.png" />
+        <br />
+    </div>
+</div>
+<div>Arduino Bağlantısı
+    <br />
+</div>
+    <div>
+        <img style="width:250px;"
+            src="https://cdn.dsmcdn.com/ty1349/product/media/html-images/20240605/21/834456771/d7668f5a-d474-4706-8522-4a823d2cc398.png" />
+        <br />
+    </div>
+</div>
+<div>Kullanım
+    <br />
+</div>
+<div>
+    <code style="font-family: Consolas;color: black;background-color: #a8a3a3;font-size: 105%;">void setup() {
+            <br />&emsp;Serial.begin(9600); // Bağlantı hızı 9600 bps olacak şekilde seriport açılır.
+            <br />}
+            <br />void loop() {
+            <br />&emsp;int val;
+            <br />&emsp;val = analogRead(0); //Analog 0 bağlantısı yapılmış sensör değeri okunur.
+            <br />&emsp;Serial.println(val); //okunan değer seriporta iletilir.
+            <br />&emsp;delay(100);
+            <br />}
+            <br />
+        </code>
+</div>
+<div>Kalibrasyon işlemi
+    <br />
+    <img style="width:250px;"
+        src="https://marketplace-single-product-images.oss-eu-central-1.aliyuncs.com/prod/979997/27fc4278-eba3-4a90-bf24-bdfc65cc44f7/CSMSRec.png" />
+</div>
+<div>
+    <ul>
+        <li>1. Bağlantı hızı 9600 bps olacak şekilde seriport monitörü açılır.
+        </li>
+        <li>2. Kuru olarak hava da ölçüğü değer Değer 1 olarak not edilir. Bu toprak nemi için kuru 0%RH kabul edilir.
+        </li>
+        <li>3. Bir bardak su içine sensör ucu Uyarı kısmına gelmeyecek seviyeye kadar daldırılır.
+        </li>
+        <li>4. En yüksek ölçtüğü değer Değer 2 olarak not edilir. Bu toprak meni için Islak 100%RH kabul edilir.
+        </li>
+        <table style="font-family: Consolas;color: rgb(255, 0, 0);background-color: #a8a3a3;font-size: 105%;">
+            <tbody>
+                <tr>
+                    <th>!
+                    </th>
+                    <th>Bu karttaki bileşenler su geçirmez DEĞİLDİR, kırmızı çizgiden daha fazla neme maruz bırakmayın.
+                        (Bileşenleri hava koşullarından korumak istiyorsanız, levhanın üst kısmı çevresinde geniş bir
+                        ısıyla daralan makaron kullanmayı deneyin.) Sensör çıkış değeri ile toprak nemi arasında ters
+                        bir oran vardır.
+                        <br />
+                        Su geçirmez ürünümüz tercih edilebilir.
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </ul>
+</div>
+<div>Çıkış Kontrolü
+    <br />
+    Nihai çıkış değeri, prob yerleştirme derinliğinden ve etrafındaki toprağın ne kadar sıkı olduğundan etkilenir.
+    "deger_1"i kuru toprak, "deger_2"yi ise ıslatılmış toprak olarak kabul ediyoruz. Bu sensör algılama aralığıdır.
+    Örneğin: Değer_1 = 520; Değer_2 = 260. Aralık üç bölüme ayrılacaktır: kuru, ıslak, su. İlgili değerleri şunlardır:
+    <br />Kuru: 520~430
+    <br /> Islak: 430~350
+    <br /> Su: 350~260
+</div>
+<div>
+    <code style="font-family: Consolas;color: black;background-color: #a8a3a3;font-size: 105%;">
+            <br />const int AirValue = 520;   //Havada yapılan ölçüm değeri olan Değer_1 yazılır.
+            <br />const int WaterValue = 260;  //Suda yapılan ölçüm değeri olan Değer_2 yazılır.
+    <br />int intervals = (AirValue - WaterValue)/3;
+    <br />int soilMoistureValue = 0;
+    <br />void setup() {
+            <br />&emsp;Serial.begin(9600); // Bağlantı hızı 9600 bps olacak şekilde seriport açılır.
+            <br />}
+            <br />void loop() {
+                <br />&emsp;  soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
+                <br />&emsp; if(soilMoistureValue > WaterValue && soilMoistureValue < (WaterValue + intervals))
+                <br />&emsp; {
+                    <br />&emsp;&emsp;   Serial.println("Cok Islak");
+                  <br />&emsp; }
+                <br />&emsp; else if(soilMoistureValue > (WaterValue + intervals) && soilMoistureValue < (AirValue - intervals))
+                <br />&emsp; {
+                    <br />&emsp;&emsp;   Serial.println("Islak");
+                  <br />&emsp; }
+                <br />&emsp;else if(soilMoistureValue < AirValue && soilMoistureValue > (AirValue - intervals))
+                <br />&emsp;{
+                    <br />&emsp;&emsp;Serial.println("Kuru");
+                  <br />&emsp;}
+               <br />&emsp;delay(100);
+            <br />}
+            <br />
+        </code>
+</div>

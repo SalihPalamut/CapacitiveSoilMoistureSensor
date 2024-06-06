@@ -1,14 +1,10 @@
-Project Outputs Generation Report
----------------------------------
-Start Output Generation At 17:12:33 On 18.05.2024
-
-Output: Export STEP
+Output: Export PARASOLID
 Type  : ExportSTEP
 From  : Variant [[No Variations]] of PCB Document [CSMS.PcbDoc]
-   Generated File[CSMST.step]
+   Generated File[CSMS.x_t]
 
 
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 17:12:34 On 18.05.2024
+Finished Output Generation At 13:08:55 On 4.06.2024
