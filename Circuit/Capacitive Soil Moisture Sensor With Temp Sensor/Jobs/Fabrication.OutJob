@@ -15,13 +15,13 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Fabrication.OutJob
+Name=
 Description=
 TargetOutputMedium=CSMS
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
-TargetPrinter=MF650C Series
+TargetPrinter=Canon MF650C Series UFR II
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -53,7 +53,7 @@ Configuration2_Name1=OutputConfigurationParameter1
 Configuration2_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressLeadingZeroes|DocumentPath=C:\Users\slp-0\OneDrive\Belgeler\GitHub\Wi-Fi_MechanicalRelay\Circuit\WiFi_Relay\Board\WiFi_Relay.PcbDoc
 
 [PublishSettings]
-OutputFilePath2=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\Production\CSMST\
+OutputFilePath2=D:\Git\CapacitiveSoilMoistureSensor\Production\CSMST\
 ReleaseManaged2=0
 OutputBasePath2=..\..\Production\
 OutputPathMedia2=CSMST
@@ -65,12 +65,12 @@ OutputFileName2=
 OutputFileNameMulti2=
 UseOutputNameForMulti2=1
 OutputFileNameSpecial2=
-OpenOutput2=1
+OpenOutput2=0
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\Production\CSMST\
-OpenOutputs2=1
-AddToProject2=1
+RelativeOutputPath2=D:\Git\CapacitiveSoilMoistureSensor\Production\CSMST\
+OpenOutputs2=0
+AddToProject2=0
 TimestampFolder2=0
 UseOutputName2=0
 OpenODBOutput2=0

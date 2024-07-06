@@ -15,13 +15,13 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Document.OutJob
+Name=
 Description=
 TargetOutputMedium=Folder Structure
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
-TargetPrinter=MF650C Series
+TargetPrinter=Canon MF650C Series UFR II
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -192,7 +192,7 @@ Configuration6_Name7=VisibleOrder_Flat
 Configuration6_Item7=Line #=100|Comment=100|Description=100|Designator=100|Manufacturer 1=99|Manufacturer Part Number 1=166|Manufacturer Lifecycle 1=145|Supplier 1=121|Supplier Part Number 1=140|Supplier Unit Price 1=125|Supplier Subtotal 1=117
 
 [PublishSettings]
-OutputFilePath2=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\UserManual\PCB.PDF
+OutputFilePath2=D:\Git\CapacitiveSoilMoistureSensor\UserManual\WithTempPCB.PDF
 ReleaseManaged2=0
 OutputBasePath2=..\..\UserManual\
 OutputPathMedia2=
@@ -219,7 +219,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=1
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\Mechanics\PCB\
+OutputFilePath3=D:\Git\CapacitiveSoilMoistureSensor\Mechanics\PCB\
 ReleaseManaged3=0
 OutputBasePath3=..\..\Mechanics\PCB\
 OutputPathMedia3=
@@ -231,7 +231,7 @@ OutputFileName3=
 OutputFileNameMulti3=CSMST
 UseOutputNameForMulti3=0
 OutputFileNameSpecial3=
-OpenOutput3=1
+OpenOutput3=0
 OutputFilePath4=Project Outputs for Free Documents\Document.wmv
 ReleaseManaged4=1
 OutputBasePath4=Project Outputs for Capacitive Soil Moisture Sensor with Temp Sensor
@@ -271,11 +271,11 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\UserManual\PCB.PDF
+RelativeOutputPath2=D:\Git\CapacitiveSoilMoistureSensor\UserManual\WithTempPCB.PDF
 OpenOutputs2=1
-RelativeOutputPath3=C:\Users\slp-0\OneDrive\Belgeler\GitHub\CapacitiveSoilMoistureSensor\Mechanics\PCB\
-OpenOutputs3=1
-AddToProject3=1
+RelativeOutputPath3=D:\Git\CapacitiveSoilMoistureSensor\Mechanics\PCB\
+OpenOutputs3=0
+AddToProject3=0
 TimestampFolder3=0
 UseOutputName3=0
 OpenODBOutput3=0
